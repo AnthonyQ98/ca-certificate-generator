@@ -1,8 +1,8 @@
 rm *.pem
 
-export CASUBJ=//C=IE/ST=Leinster/L=Kilkenny/O=Anthony/OU=Tech/CN=brightech.ie/emailAddress=anthonyquinn.developer@gmail.com
+export CASUBJ=//C=IE/ST=Foo/L=Bar/O=Anthony/OU=Tech/CN=anthonysca.ie/emailAddress=something@gmail.com
 
-export SERVERSUBJ=//C=IE/ST=Leinster/L=Kilkenny/O=Anthony/OU=Tech/CN=pcbook.com/emailAddress=anthonyquinn.developer@gmail.com
+export SERVERSUBJ=//C=IE/ST=Foo/L=Bar/O=Anthony/OU=Tech/CN=myamazingwebsite.com/emailAddress=something@gmail.com
 # Generate CA's private key and self-signed cert
 openssl req -x509 -newkey rsa:4096 -days 365 -nodes -keyout ca-key.pem -out ca-cert.pem -subj "${CASUBJ}"
 
